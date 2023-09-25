@@ -15,6 +15,8 @@
 # 0 <= strs[i].length <= 200
 # strs[i] consists of only lowercase English letters. 
 
+import re
+
 class Solution:
     def longestCommonPrefix(self, strs: list[str]) -> str:
         if len(strs)==1:
@@ -37,3 +39,10 @@ class Solution:
             return min([a for a in substring.values()])
         except:
             return ""
+        
+
+strs = ["flower","flow","flight"]
+
+a = Solution()
+b=a.longestCommonPrefix(strs)
+print(b)
